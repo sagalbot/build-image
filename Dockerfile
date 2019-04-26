@@ -320,8 +320,8 @@ RUN mkdir /opt/binrc && cd /opt/binrc && \
 
 # Create a place for binrc to link/persist installs to the PATH
 USER buildbot
-RUN mkdir -p /opt/buildhome/.binrc/bin
-ENV PATH "/opt/buildhome/.binrc/bin:$PATH"
+RUN mkdir -p /opt/build/.binrc/bin
+ENV PATH "/opt/build/.binrc/bin:$PATH"
 
 USER root
 
