@@ -472,8 +472,8 @@ install_dependencies() {
     if [ $? -eq 0 ]
     then
       echo $zisiOut
-      ln -s $zisiOut $NETLIFY_BUILD_BASE/.binrc/bin/zip-it-and-ship-it_${ZISI_VERSION}
-      ln -s $NETLIFY_BUILD_BASE/.binrc/bin/zip-it-and-ship-it_${ZISI_VERSION} $NETLIFY_BUILD_BASE/.binrc/bin/zip-it-and-ship-it
+      ln -s $zisiOut /opt/buildhome/.binrc/bin/zip-it-and-ship-it_${ZISI_VERSION}
+      ln -s /opt/buildhome/.binrc/bin/zip-it-and-ship-it_${ZISI_VERSION} /opt/buildhome/.binrc/bin/zip-it-and-ship-it
       zip-it-and-ship-it --version
     else
       echo "Error during Zip-it-and-ship-it $ZISI_VERSION install: $zisiOut"
